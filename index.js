@@ -31,7 +31,7 @@ app.get('/res', (req, res) => {
 app.get('/home', (req, res) => {
   // console.log(req.path, req.query);// /home?a=1&b=3 {a:1,b:3}
   console.log(req.get('accept'));
-  res.sendFile(__dirname, 'pages/index.html');
+  res.sendFile(__dirname+ 'pages/index.html');
 });
 app.get('/other', (req, res) => {
   res.redirect('http://www.google.com'); //.status(302)
